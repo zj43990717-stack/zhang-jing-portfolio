@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="张晶的 AI 产品经理实习生作品集：AI 团建助手交互 Demo、AI 视频产品分析与 AI 内容生产实践。">
+  <title>张晶｜AI 产品经理实习生作品集</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23111111'/%3E%3Cpath d='M8 17h9l-3 7 10-11h-9l3-6z' fill='%235b5cff'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#111;--paper:#f7f7f3;--blue:#5b5cff;--acid:#dfff3f;--line:#d8d8d2;--muted:#696965;--radius:24px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--acid)}
+    .shell{width:min(1180px,calc(100% - 40px));margin:auto}.nav-wrap{position:fixed;z-index:20;top:22px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 17px;border:1px solid #d4d4cf;background:#f7f7f3e8;backdrop-filter:blur(18px);border-radius:999px;box-shadow:0 10px 35px #1111}.mark{font-weight:900;letter-spacing:-.05em}.nav{display:flex;align-items:center;gap:4px}.nav a{padding:9px 14px;border-radius:999px;font-size:14px}.nav a:hover{background:#e9e9e4}.nav .contact{background:var(--ink);color:#fff}.nav .contact:hover{background:var(--blue)}
+    .hero{min-height:100vh;display:grid;align-items:center;padding:125px 0 60px}.eyebrow{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:750}.eyebrow i{width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 7px #5b5cff19}.hero h1{font-size:clamp(40px,7vw,96px);line-height:1.08;letter-spacing:-.055em;margin:28px 0 25px;max-width:1050px;overflow-wrap:anywhere}.hero h1 span:not(.hero-emoji){color:var(--blue)}.hero-emoji{display:inline-block;font-size:.62em;line-height:1;letter-spacing:0;vertical-align:middle;transform-origin:70% 80%;animation:hero-wave 2.6s ease-in-out infinite}.hero-bottom{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:end}.hero-intro{font-size:clamp(18px,2vw,25px);max-width:670px;margin:0}.hero-meta{border-top:1px solid var(--ink);padding-top:12px;color:var(--muted);font-size:14px}.hero-actions{display:flex;gap:10px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border:1px solid var(--ink);border-radius:999px;font-weight:750;transition:.2s}.btn.primary{background:var(--ink);color:#fff}.btn:hover{transform:translateY(-2px);box-shadow:4px 4px 0 var(--blue)}@keyframes hero-wave{0%,55%,100%{transform:rotate(-12deg)}12%,32%{transform:rotate(18deg)}22%,42%{transform:rotate(-8deg)}}
+    .section{padding:110px 0}.section-head{display:grid;grid-template-columns:170px 1fr;gap:35px;align-items:start;margin-bottom:46px}.section-no{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.16em}.section h2{font-size:clamp(38px,5.7vw,72px);line-height:1.14;letter-spacing:-.035em;margin:0}.section-lead{max-width:650px;font-size:18px;color:var(--muted);margin:18px 0 0}
+    .project{border-top:1px solid var(--ink);padding:28px 0 48px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px}.project-label{font-size:13px;color:var(--muted);letter-spacing:.08em}.project h3{font-size:clamp(30px,4vw,55px);line-height:1.05;letter-spacing:-.055em;margin:16px 0}.project-copy p{max-width:520px;color:var(--muted);font-size:17px}.tags{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0}.tag{border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:13px;background:#fff}.project-link{display:inline-flex;gap:9px;align-items:center;font-weight:800;border-bottom:2px solid var(--ink)}
+    .product-shot{aspect-ratio:16/10;border-radius:var(--radius);padding:0;background:#24213e;overflow:hidden;position:relative;display:block;border:1px solid #d8d8e5}.product-shot img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transition:transform .45s ease}.product-shot:hover img{transform:scale(1.025)}
+    .experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.experience-card{padding:25px;border:1px solid var(--ink);border-radius:var(--radius);background:#fff;min-height:250px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}.experience-card:hover{background:var(--acid);transform:translateY(-3px)}.experience-card .time{font-size:13px;color:var(--muted)}.experience-card h3{font-size:30px;line-height:1.08;letter-spacing:-.04em;margin:20px 0 8px}.experience-card p{color:var(--muted);margin:0}.experience-card b{font-size:14px}
+    .tool-row{display:flex;flex-wrap:wrap;border-top:1px solid var(--ink)}.tool-row span{padding:18px 26px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);font-weight:850;font-size:20px;background:#fff}.tool-row span:nth-child(3n+1){color:var(--blue)}
+    .about-grid{display:grid;grid-template-columns:380px 1fr;gap:60px;align-items:center}.portrait-placeholder{aspect-ratio:4/5;border-radius:var(--radius);background:#111;color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:25px;position:relative;overflow:hidden}.portrait-placeholder strong{font-size:130px;letter-spacing:-.12em;line-height:1;align-self:center;margin:auto}.portrait-placeholder small{font-size:12px;letter-spacing:.14em;color:var(--acid)}.about-copy{font-size:clamp(25px,3.4vw,43px);line-height:1.24;letter-spacing:-.04em}.about-copy span{color:var(--blue)}.small-note{font-size:16px;color:var(--muted);max-width:600px}.contact-section{padding:110px 0 55px;background:var(--ink);color:#fff}.contact-section h2{font-size:clamp(48px,7.5vw,96px);line-height:1.08;letter-spacing:-.04em;margin:0}.contact-section h2 span{color:var(--acid)}.contact-row{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:65px;padding-top:20px;border-top:1px solid #ffffff45}.contact-row p{color:#aaa;max-width:480px}.contact-links{display:flex;gap:10px}.contact-links .btn{border-color:#fff}.contact-links .btn:hover{box-shadow:4px 4px 0 var(--acid)}footer{background:var(--ink);color:#777;padding:25px 0;font-size:13px}.reveal{opacity:0;transform:translateY(24px);transition:.7s}.reveal.visible{opacity:1;transform:none}
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 18px}.case-card{border:1px solid var(--line);background:#fff;border-radius:18px;padding:21px}.case-card .case-no{color:var(--blue);font-size:13px;font-weight:800}.case-card h4{font-size:20px;line-height:1.25;margin:16px 0 10px}.case-card p{font-size:15px;line-height:1.75;color:var(--muted);margin:0}.validation-note{background:#ebe9ff;border-radius:18px;padding:18px 22px;margin-bottom:44px;font-size:16px;line-height:1.7}.validation-note strong{color:var(--blue)}.secondary-project{border-top:1px solid var(--ink);padding-top:27px;display:grid;grid-template-columns:1fr 1fr;gap:30px}.secondary-project h3{font-size:clamp(28px,3.5vw,45px);line-height:1.15;margin:12px 0}.secondary-project p{font-size:17px;color:var(--muted);margin:0}.secondary-project .project-label{align-self:start}.secondary-project .research-note{border-left:3px solid var(--blue);padding:5px 0 5px 18px}
+    @media(max-width:800px){.shell{width:min(100% - 26px,1180px)}.nav a:not(.contact){display:none}.hero{padding-top:115px}.hero h1{font-size:clamp(36px,7.4vw,58px);line-height:1.12;letter-spacing:-.045em}.hero-bottom,.section-head,.project,.about-grid,.secondary-project{grid-template-columns:1fr}.hero-meta{max-width:400px}.section{padding:78px 0}.project{gap:22px}.product-shot{min-height:0;order:-1}.experience-grid,.case-grid{grid-template-columns:1fr}.about-grid{gap:28px}.portrait-placeholder{max-width:380px}.contact-row{display:block}.contact-links{margin-top:25px;flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.hero-emoji{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap"><a class="mark" href="#top">ZJ.</a><nav class="nav" aria-label="主导航"><a href="#work">项目</a><a href="#experience">经历</a><a href="resume.pdf" target="_blank" rel="noreferrer">简历 PDF</a><a class="contact" href="#contact">联系我 ↗</a></nav></div>
+  <main id="top">
+    <section class="hero shell">
+      <div>
+        <div class="eyebrow"><i></i>AI 产品经理实习生 · 2027 届本科在读</div>
+        <h1>我叫张晶。<span class="hero-emoji" aria-hidden="true">👋</span><br>从真实问题出发，<br>把 <span>AI</span> 做成可体验的产品。</h1>
+        <div class="hero-bottom"><div><p class="hero-intro">有 8 个月 AI 内容生产实践，独立完成「AI 团建助手」的场景梳理、双角色流程与交互 Demo。关注 AI 功能是否真正帮人完成任务。</p><div class="hero-actions"><a class="btn primary" href="#work">查看项目 ↓</a><a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">查看简历 PDF ↗</a></div></div><div class="hero-meta">AI PRODUCT DESIGN<br>CONTENT WORKFLOW<br>INTERACTIVE DEMO</div></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="work">
+      <div class="section-head reveal"><div class="section-no">01 / Selected work</div><div><h2>产品问题，<br>要能讲清楚，也要能动手验证。</h2><p class="section-lead">下面是我的产品项目与 AI 视频工具分析。你可以直接打开 Demo，查看负责人和成员如何完成一次活动。</p></div></div>
+      <article class="project reveal">
+        <div class="project-copy"><div class="project-label">FEATURED PROJECT · 2026</div><h3>AI 团建助手</h3><p>面向团建、研学、写生等集体活动。把分散的报名需求集中到负责人和成员的双端流程中，让 AI 协助提取活动条件、提示车辆与餐饮冲突，并由负责人确认处理结果。</p><div class="tags"><span class="tag">独立产品项目</span><span class="tag">AI 功能设计</span><span class="tag">双角色流程</span><span class="tag">交互 Demo</span></div><a class="project-link" href="https://ai-team-building-assistant.zj43990717.chatgpt.site" target="_blank" rel="noreferrer">体验完整 Demo <span>↗</span></a></div>
+        <a class="product-shot" href="https://ai-team-building-assistant.zj43990717.chatgpt.site" target="_blank" rel="noreferrer" aria-label="打开 AI 活动助手 Demo"><img src="ai-group-travel-home.png" alt="一起走 AI 活动助手负责人工作台首页截图"></a>
+      </article>
+      <div class="case-grid reveal" aria-label="AI 团建助手设计说明">
+        <div class="case-card"><div class="case-no">01 / 问题</div><h4>信息散落，反复确认</h4><p>负责人要在聊天和表格间核对人数、车辆、餐饮与行程；成员也需要及时知道最新安排。</p></div>
+        <div class="case-card"><div class="case-no">02 / 设计</div><h4>负责人 × 成员协作</h4><p>从创建活动、报名到异常处理与发布通知，明确两类角色各自的操作和数据回传。</p></div>
+        <div class="case-card"><div class="case-no">03 / AI 边界</div><h4>展示依据，保留确认</h4><p>AI 提取条件并提示潜在冲突，界面展示判断依据；方案调整和最终发布由负责人决定。</p></div>
+      </div>
+      <div class="validation-note reveal"><strong>试用与调整 /</strong> 邀请 3 位有团建组织经验的人试用，结合反馈调整角色入口与活动场景命名，完成当前 Demo。</div>
+      <article class="secondary-project reveal"><div><div class="project-label">PRODUCT RESEARCH</div><h3>AI 视频产品竞品分析</h3><p>围绕文生视频、图生视频与角色一致性，体验即梦、可灵、豆包等工具，累计进行 30 余次功能测试。</p></div><div class="research-note"><p>比较从输入想法到得到可用画面的完整过程，重点记录结果可控性、人物一致性和修改路径中的断点，并结合短剧制作经历整理产品改进方向。</p></div></article>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-head reveal"><div class="section-no">02 / Experience</div><div><h2>我在真实的 AI 生产流程里，见过问题怎样发生。</h2><p class="section-lead">在陕西深海鱼印象影视文化有限公司实习共 8 个月，参与 AI 短剧镜头设计与视觉资产制作，关注生成、修改和交付中的可控性与协作体验。</p></div></div>
+      <div class="experience-grid">
+        <article class="experience-card reveal"><div><span class="time">5 MONTHS · INTERNSHIP</span><h3>AI 短剧 镜头设计实践</h3><p>根据剧本拆解人物关系、场景与情绪目标，编写画面 Prompt，设计景别、构图、机位与人物调度。检查生成画面与剧情要求的差异，围绕角色和相邻镜头的连续性多轮修改。</p></div><b>剧本拆解 · Prompt 设计 · 分镜与关键帧 · 连续性修改</b></article>
+        <article class="experience-card reveal"><div><span class="time">3 MONTHS · INTERNSHIP</span><h3>AI 视觉开发 与美术资产制作</h3><p>参与人物形象、服装道具与场景资产制作；生成和筛选多版方案，统一人物五官、服装与场景风格，整理命名、版本和交付文件，并根据镜头反馈继续修正。</p></div><b>人物设定 · 道具与场景 · 风格统一 · 资产管理</b></article>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="section-head reveal"><div class="section-no">03 / Skills & Toolkit</div><div><h2>从问题定义，<br>到 AI 功能与交互原型。</h2><p class="section-lead">能力展示对应上方项目和实习实践，点击 Demo 可以直接查看设计结果。</p></div></div>
+      <div class="tool-row reveal"><span>问题定义</span><span>用户流程</span><span>竞品分析</span><span>功能设计</span><span>AI 输入与输出</span><span>人工确认流程</span><span>Prompt 设计</span><span>交互原型</span><span>ChatGPT</span><span>Codex</span><span>Figma</span><span>Photoshop</span></div>
+    </section>
+
+    <section class="section shell" id="about">
+      <div class="about-grid"><div class="portrait-placeholder reveal" aria-label="张晶个人标识"><small>ZHANG JING / AI PRODUCT</small><strong>晶</strong><small>2027 GRADUATE</small></div><div class="reveal"><div class="section-no">04 / About me</div><p class="about-copy">我正在寻找 <span>AI 产品经理实习生</span> 的机会。</p><p class="small-note">数字媒体艺术本科在读。我在 AI 短剧与视觉资产制作中积累了内容生产的一线经验，也独立完成了 AI 团建助手的产品设计和网页 Demo。我关心用户实际要完成的任务，以及 AI 该在哪一步提供帮助。</p><a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">查看完整简历 ↗</a></div></div>
+    </section>
+  </main>
+
+  <section class="contact-section" id="contact"><div class="shell"><div class="section-no" style="color:#888">05 / Get in touch</div><h2>一起做点<br><span>有用的东西。</span></h2><div class="contact-row"><p>正在申请 AI 产品经理实习生岗位。欢迎查看项目 Demo 与简历，也欢迎通过电话或邮箱联系我。</p><div class="contact-links"><a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">简历 PDF ↗</a><a class="btn" href="tel:15829306883">电话：15829306883</a><a class="btn" href="mailto:3466497751@qq.com">邮箱：3466497751@qq.com</a></div></div></div></section>
+  <footer><div class="shell">© 2026 张晶 · AI 产品经理实习生作品集</div></footer>
+  <script>
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
+
